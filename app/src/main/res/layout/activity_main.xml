@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minima Explorer — header with live tip chip, search bar, pairing banner, then a content frame:
+     the home page (stats + latest blocks) lives in it, and detail pages are pushed on top.
+     Insets are applied in MainActivity (header clears the status bar, content clears the nav bar). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0A0F">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#15151F"
+        android:paddingStart="18dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Minima Explorer"
+            android:textColor="#F7931A"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:letterSpacing="0.02" />
+
+        <TextView
+            android:id="@+id/tipChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="● —"
+            android:textColor="#2ECC71"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:padding="6dp" />
+    </LinearLayout>
+
+    <!-- Search -->
+    <LinearLayout
+        android:id="@+id/searchRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#15151F"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="12dp">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:hint="Block № · TxPoW ID · 0x / Mx address"
+            android:textColorHint="#6A6A78"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:background="@null" />
+
+        <TextView
+            android:id="@+id/goBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="#0A0A0F"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="9dp"
+            android:paddingBottom="9dp" />
+    </LinearLayout>
+
+    <!-- Pairing banner: shown until the user enables this app in Minima Core -> Apps -->
+    <LinearLayout
+        android:id="@+id/pairingBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#15151F"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Minima Explorer is not enabled yet"
+            android:textColor="#F7931A"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:text="Open Minima Core → Apps and enable Minima Explorer to authorize it, then come back."
+            android:textColor="#9A9AA8"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/openNodeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Open Minima Core"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Home page + pushed detail pages -->
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

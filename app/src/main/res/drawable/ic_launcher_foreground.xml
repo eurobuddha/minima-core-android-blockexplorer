@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stack of three linked blocks — orange on the dark house background. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group>
+        <!-- bottom block -->
+        <path
+            android:fillColor="#F7931A"
+            android:pathData="M34,62 h40 v14 a3,3 0 0 1 -3,3 h-34 a3,3 0 0 1 -3,-3 z" />
+        <!-- middle block (brighter, the tip) -->
+        <path
+            android:fillColor="#FFB04D"
+            android:pathData="M31,44 a3,3 0 0 1 3,-3 h40 a3,3 0 0 1 3,3 v14 h-46 z" />
+        <!-- top block, offset — the incoming block -->
+        <path
+            android:fillColor="#F7931A"
+            android:fillAlpha="0.55"
+            android:pathData="M42,26 a3,3 0 0 1 3,-3 h30 a3,3 0 0 1 3,3 v11 h-36 z" />
+        <!-- chain link dots -->
+        <path
+            android:fillColor="#0A0A0F"
+            android:pathData="M52,49.5 a2.5,2.5 0 1 0 5,0 a2.5,2.5 0 1 0 -5,0 z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:fillAlpha="0.85"
+            android:pathData="M52,68 a2.5,2.5 0 1 0 5,0 a2.5,2.5 0 1 0 -5,0 z" />
+    </group>
+</vector>
