@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle b) {
+        Design.apply(Design.loadPref(this));   // palette BEFORE any view is built
         super.onCreate(b);
         setContentView(R.layout.activity_main);
 
@@ -106,13 +107,8 @@ public class MainActivity extends AppCompatActivity {
         pairingBanner = findViewById(R.id.pairingBanner);
         content = findViewById(R.id.content);
 
-        // chrome styling that XML can't do (rounded shapes)
-        search.setBackground(Design.card(this, Design.CARD_2, 12));
-        ((View) search.getParent()).setPadding(dp(14), 0, dp(14), dp(12));
-        goBtn.setBackground(Design.card(this, Design.ACCENT, 12));
-        LinearLayout.LayoutParams gl = (LinearLayout.LayoutParams) goBtn.getLayoutParams();
-        gl.setMarginStart(dp(8));
-        goBtn.setLayoutParams(gl);
+        // chrome styling that XML can't do (rounded shapes + the active palette)
+        applyChrome();
 
         applyInsets();
         buildHome();
@@ -125,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         Button openNode = findViewById(R.id.openNodeBtn);
         openNode.setOnClickListener(v -> openMinimaCore());
         openNode.setBackgroundTintList(android.content.res.ColorStateList.valueOf(Design.ACCENT));
-        openNode.setTextColor(Design.BG);
+        openNode.setTextColor(Design.ON_ACCENT);
 
         backCb = new OnBackPressedCallback(false) {
             @Override public void handleOnBackPressed() { popPage(); }
@@ -164,6 +160,47 @@ public class MainActivity extends AppCompatActivity {
         if (node != null) node.onDestroy();
     }
 
+    /** Paint the XML chrome with the active palette (XML ships the dark defaults). */
+    private void applyChrome() {
+        findViewById(R.id.main).setBackgroundColor(Design.BG);
+        getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(Design.BG));
+        getWindow().setStatusBarColor(Design.CARD);
+        getWindow().setNavigationBarColor(Design.BG);
+
+        View header = findViewById(R.id.header);
+        header.setBackgroundColor(Design.CARD);
+        ((TextView) findViewById(R.id.title)).setTextColor(Design.ACCENT);
+        tipChip.setTextColor(Design.GREEN);
+
+        // theme toggle lives in the header, after the tip chip
+        TextView theme = new TextView(this);
+        theme.setText(Design.DARK ? "☀" : "☾");
+        theme.setTextColor(Design.DIM);
+        theme.setTextSize(17f);
+        theme.setPadding(dp(10), dp(2), dp(4), dp(2));
+        theme.setOnClickListener(v -> {
+            Design.savePref(this, !Design.DARK);
+            recreate();
+        });
+        ((LinearLayout) header).addView(theme);
+
+        View searchRow = findViewById(R.id.searchRow);
+        searchRow.setBackgroundColor(Design.CARD);
+        searchRow.setPadding(dp(14), 0, dp(14), dp(12));
+        search.setBackground(Design.card(this, Design.CARD_2, 12));
+        search.setTextColor(Design.TEXT);
+        search.setHintTextColor(Design.DIM_2);
+        goBtn.setBackground(Design.card(this, Design.ACCENT, 12));
+        goBtn.setTextColor(Design.ON_ACCENT);
+        LinearLayout.LayoutParams gl = (LinearLayout.LayoutParams) goBtn.getLayoutParams();
+        gl.setMarginStart(dp(8));
+        goBtn.setLayoutParams(gl);
+
+        pairingBanner.setBackgroundColor(Design.CARD);
+        ((TextView) findViewById(R.id.pairTitle)).setTextColor(Design.ACCENT);
+        ((TextView) findViewById(R.id.pairSub)).setTextColor(Design.DIM);
+    }
+
     private void applyInsets() {
         final View root = findViewById(R.id.main);
         final View header = findViewById(R.id.header);
@@ -176,7 +213,9 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         ViewCompat.requestApplyInsets(root);
-        new WindowInsetsControllerCompat(getWindow(), root).setAppearanceLightStatusBars(false);
+        WindowInsetsControllerCompat wic = new WindowInsetsControllerCompat(getWindow(), root);
+        wic.setAppearanceLightStatusBars(!Design.DARK);
+        wic.setAppearanceLightNavigationBars(!Design.DARK);
     }
 
     // ================================================================== pairing

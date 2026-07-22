@@ -97,6 +97,7 @@
         android:visibility="gone">
 
         <TextView
+            android:id="@+id/pairTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Minima Explorer is not enabled yet"
@@ -105,6 +106,7 @@
             android:textSize="14sp" />
 
         <TextView
+            android:id="@+id/pairSub"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="4dp"
