@@ -9,8 +9,14 @@
         <package android:name="org.minimarex.minimacore" />
     </queries>
 
+    <!-- allowBackup=false: the whole apks/ fleet was scaffolded with allowBackup="true" and empty backup
+         rules, so Android Auto Backup uploaded each app's entire data directory to the user's cloud and
+         restored it on reinstall. Harmless-looking apps still carried the node pairing token, and a
+         reinstall must be a true reset everywhere, not just in the apps holding keys.
+         At stake here: only a theme preference — but the shared minima_api_prefs pairing token (myapp_uid) travelled too,
+         and there is nothing here worth restoring, so backup buys the user nothing and costs a stale token -->
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"

@@ -1,0 +1,222 @@
+{
+  "communities": {
+    "0": [
+      "app_src_main_java_com_eurobuddha_blockexplorer_design_design_apply",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_java_handler",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_java_jsonobject",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_acceptblock",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_applyinsets",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_blockheight",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_finishload",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_loadchain",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_loadolder",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_nextprependheight",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_notfound",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_oncreate",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_onpaired",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_onresume",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_openminimacore",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_poppage",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_prependnewblocks",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_pushpage",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_reloadfromtip",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_requestrefresh",
+      "appcompatactivity",
+      "broadcastreceiver",
+      "bundle",
+      "edittext",
+      "framelayout",
+      "lrucache",
+      "onbackpressedcallback",
+      "recyclerview",
+      "view"
+    ],
+    "1": [
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_buildhome",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_coinsection",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_copyrow",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_copytoclip",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_divider",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_dp",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_kv",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_linkrow",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_newpage",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_rawjsonsection",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_sectioncard",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_sectionheader",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_showaddressresults",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_showblockdetail",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_showtxndetail",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_showtxpowsmart",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_stattile",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util_datetime",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util_relative",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util_shorten",
+      "jsonarray",
+      "linearlayout",
+      "onclicklistener",
+      "textview"
+    ],
+    "2": [
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_dosearch",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_fetchandshowblock",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_fetchandshowtxn",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_fetchstats",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_hidekeyboard",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_refreshtip",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_searchaddress",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_searchtxpowthenaddress",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_toastprogress",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_cb",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_cb_onerror",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_nodeapi_cmd",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util_isalldigits",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util_ishex"
+    ],
+    "3": [
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_ondestroy",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_cb_onresult",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_java_context",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_java_handler",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_java_jsonobject",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_nodeapi",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_nodeapi_dead",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_nodeapi_nodeapi",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_nodeapi_ondestroy",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_pairinglistener",
+      "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_pairinglistener_onenabled",
+      "minimaapi"
+    ],
+    "4": [
+      "adapter",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_blockadapter",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_blockadapter_getitemcount",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_blockadapter_getitemviewtype",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_blockadapter_onbindviewholder",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_blockadapter_oncreateviewholder",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_blockvh",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_blockvh_blockvh",
+      "nonnull",
+      "override",
+      "viewgroup",
+      "viewholder"
+    ],
+    "5": [
+      "app_src_main_java_com_eurobuddha_blockexplorer_design",
+      "app_src_main_java_com_eurobuddha_blockexplorer_design_design",
+      "app_src_main_java_com_eurobuddha_blockexplorer_design_design_card",
+      "app_src_main_java_com_eurobuddha_blockexplorer_design_design_design",
+      "app_src_main_java_com_eurobuddha_blockexplorer_design_design_dp",
+      "app_src_main_java_com_eurobuddha_blockexplorer_design_design_loadpref",
+      "app_src_main_java_com_eurobuddha_blockexplorer_design_design_outlinedcard",
+      "app_src_main_java_com_eurobuddha_blockexplorer_design_design_pill",
+      "app_src_main_java_com_eurobuddha_blockexplorer_design_design_savepref",
+      "app_src_main_java_com_eurobuddha_blockexplorer_design_java_context",
+      "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity_applychrome",
+      "gradientdrawable"
+    ],
+    "6": [
+      "app_src_main_java_com_eurobuddha_blockexplorer_util",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_java_jsonobject",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util_coinamount",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util_groupnum",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util_isminima",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util_tidyamount",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util_timemilli",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util_tokenlabel",
+      "app_src_main_java_com_eurobuddha_blockexplorer_util_util_util"
+    ],
+    "7": [
+      "gradlew",
+      "gradlew__entry",
+      "gradlew_die",
+      "gradlew_save",
+      "gradlew_warn"
+    ],
+    "8": [
+      "app_build"
+    ],
+    "9": [
+      "build"
+    ],
+    "10": [
+      "settings"
+    ]
+  },
+  "cohesion": {
+    "0": 0.12688172043010754,
+    "1": 0.2898550724637681,
+    "2": 0.26373626373626374,
+    "3": 0.23076923076923078,
+    "4": 0.2878787878787879,
+    "5": 0.3787878787878788,
+    "6": 0.3333333333333333,
+    "7": 0.6,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_mainactivity",
+      "label": "MainActivity",
+      "degree": 59
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_blockexplorer_util_util",
+      "label": "Util",
+      "degree": 13
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_nodeapi",
+      "label": "NodeApi",
+      "degree": 12
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_cb",
+      "label": "Cb",
+      "degree": 12
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_blockexplorer_design_design",
+      "label": "Design",
+      "degree": 9
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_blockadapter",
+      "label": "BlockAdapter",
+      "degree": 9
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_blockexplorer_mainactivity_blockvh",
+      "label": "BlockVH",
+      "degree": 4
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_blockexplorer_nodeapi_pairinglistener",
+      "label": "PairingListener",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "MainActivity",
+      "target": "NodeApi",
+      "source_files": [
+        "app/src/main/java/com/eurobuddha/blockexplorer/MainActivity.java",
+        "app/src/main/java/com/eurobuddha/blockexplorer/NodeApi.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

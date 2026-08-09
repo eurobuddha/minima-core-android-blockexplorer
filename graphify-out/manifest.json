@@ -1,0 +1,42 @@
+{
+  "app/build.gradle": {
+    "mtime": 1784719203.8743339,
+    "ast_hash": "c10e3b11aa28a425fd80ee2a3a3d3430",
+    "semantic_hash": "c10e3b11aa28a425fd80ee2a3a3d3430"
+  },
+  "app/src/main/java/com/eurobuddha/blockexplorer/Design.java": {
+    "mtime": 1784718892.7671635,
+    "ast_hash": "689749f5a795e845bf87bde46d423b65",
+    "semantic_hash": "689749f5a795e845bf87bde46d423b65"
+  },
+  "app/src/main/java/com/eurobuddha/blockexplorer/MainActivity.java": {
+    "mtime": 1784718926.4555008,
+    "ast_hash": "29554fe25c36017fc31204462c978953",
+    "semantic_hash": "29554fe25c36017fc31204462c978953"
+  },
+  "app/src/main/java/com/eurobuddha/blockexplorer/NodeApi.java": {
+    "mtime": 1784718073.8099387,
+    "ast_hash": "f3e19743426444b4ea0b64c3c9026526",
+    "semantic_hash": "f3e19743426444b4ea0b64c3c9026526"
+  },
+  "app/src/main/java/com/eurobuddha/blockexplorer/Util.java": {
+    "mtime": 1784718099.8220482,
+    "ast_hash": "34793e8ccebd3f41db538e761d488c51",
+    "semantic_hash": "34793e8ccebd3f41db538e761d488c51"
+  },
+  "build.gradle": {
+    "mtime": 1784717914.5531282,
+    "ast_hash": "583193a3771192898c84ddef2d926224",
+    "semantic_hash": "583193a3771192898c84ddef2d926224"
+  },
+  "gradlew": {
+    "mtime": 1784717914.552598,
+    "ast_hash": "02c16663c6f0aa37f98d94d698c22b8c",
+    "semantic_hash": "02c16663c6f0aa37f98d94d698c22b8c"
+  },
+  "settings.gradle": {
+    "mtime": 1784717914.5569954,
+    "ast_hash": "1c84b975e536aa6e72b3da92367a6ca8",
+    "semantic_hash": "1c84b975e536aa6e72b3da92367a6ca8"
+  }
+}
