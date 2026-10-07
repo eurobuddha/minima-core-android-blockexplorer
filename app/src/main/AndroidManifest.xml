@@ -6,7 +6,7 @@
          the broadcast-Intent IPC. Package visibility lets us launch the node app + deliver targeted
          broadcasts. -->
     <queries>
-        <package android:name="org.minimarex.minimacore" />
+        <package android:name="com.eurobuddha.minimacore" />
     </queries>
 
     <!-- allowBackup=false: the whole apks/ fleet was scaffolded with allowBackup="true" and empty backup
