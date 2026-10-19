@@ -1,0 +1,11 @@
+blockexplorer 0.1.6 / code106 — standalone display parity
+Reused Pandamonium scripts/adapt-pandamonium-explorer-languages.py display blocks.
+Theme toggle announces the destination theme to accessibility services.
+Standalone English labels and existing operations retained.
+Reviewed changed source/resources and callers; no blocking finding in this port.
+No JVM tests exist (test task NO-SOURCE). Offline assembleRelease and lintRelease successful:
+0 errors, 54 warnings. Actual APK package/version and family signature verified.
+No Fold check, installation, live transaction or publication.
+Candidate: dist/blockexplorer-0.1.6-candidate.apk
+SHA256: 824a1a95b82c5d9b8349c39f55261c41cb32e502a79934a3de7188cf9a548e8c
+Broader application review remains in progress.

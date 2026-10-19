@@ -175,6 +175,7 @@ public class MainActivity extends AppCompatActivity {
         // theme toggle lives in the header, after the tip chip
         TextView theme = new TextView(this);
         theme.setText(Design.DARK ? "☀" : "☾");
+        theme.setContentDescription(Design.DARK ? "Light theme" : "Dark theme");
         theme.setTextColor(Design.DIM);
         theme.setTextSize(17f);
         theme.setPadding(dp(10), dp(2), dp(4), dp(2));
