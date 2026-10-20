@@ -1,8 +1,8 @@
 {
   "app/build.gradle": {
-    "mtime": 1784719203.8743339,
-    "ast_hash": "c10e3b11aa28a425fd80ee2a3a3d3430",
-    "semantic_hash": "c10e3b11aa28a425fd80ee2a3a3d3430"
+    "mtime": 1788463661.2184856,
+    "ast_hash": "4ad411dc30adb0484018e99030a94e5e",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/eurobuddha/blockexplorer/Design.java": {
     "mtime": 1784718892.7671635,
@@ -38,5 +38,20 @@
     "mtime": 1784717914.5569954,
     "ast_hash": "1c84b975e536aa6e72b3da92367a6ca8",
     "semantic_hash": "1c84b975e536aa6e72b3da92367a6ca8"
+  },
+  ".githooks/install.sh": {
+    "mtime": 1786883549.7659526,
+    "ast_hash": "f31b37c6d1b5d340a5623f1715457ea0",
+    "semantic_hash": ""
+  },
+  ".githooks/pre-commit": {
+    "mtime": 1786883549.7625558,
+    "ast_hash": "03526be838d5dd774506cc1f8b47f38c",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1786883549.7756937,
+    "ast_hash": "38b3a3e99022019d0607ba0263f5f847",
+    "semantic_hash": ""
   }
 }

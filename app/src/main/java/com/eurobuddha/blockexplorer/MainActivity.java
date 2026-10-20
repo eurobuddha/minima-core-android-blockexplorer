@@ -179,6 +179,9 @@ public class MainActivity extends AppCompatActivity {
         theme.setTextColor(Design.DIM);
         theme.setTextSize(17f);
         theme.setPadding(dp(10), dp(2), dp(4), dp(2));
+        theme.setMinWidth(dp(48));
+        theme.setMinHeight(dp(48));
+        theme.setGravity(Gravity.CENTER);
         theme.setOnClickListener(v -> {
             Design.savePref(this, !Design.DARK);
             recreate();
@@ -518,12 +521,12 @@ public class MainActivity extends AppCompatActivity {
         node.cmd("txpow address:" + addr, new NodeApi.Cb() {
             @Override public void onResult(JSONObject j) {
                 JSONArray arr = j.optJSONArray("response");
-                if (arr == null || arr.length() == 0) { notFound(Util.shorten(addr)); return; }
+                if (arr == null || arr.length() == 0) { notFound(addr); return; }
                 showAddressResults(addr, arr);
             }
             @Override public void onError(String m) {
                 if (NodeApi.ERR_NOT_ENABLED.equals(m)) return;
-                notFound(Util.shorten(addr));
+                notFound(addr);
             }
         });
     }
@@ -636,7 +639,7 @@ public class MainActivity extends AppCompatActivity {
         kv(facts, "Size", txpow.optString("size", "—") + " bytes");
         kv(facts, "Burn", Util.tidyAmount(txpow.optString("burn", "0")) + " MINIMA");
         if (header != null) {
-            kv(facts, "Difficulty", Util.shorten(header.optString("blkdiff", "—")));
+            copyRow(facts, "Difficulty", header.optString("blkdiff", "—"));
             kv(facts, "Cascade levels", header.optString("cascadelevels", "—"));
             JSONArray sp = header.optJSONArray("superparents");
             if (sp != null && sp.length() > 0) {
@@ -684,11 +687,11 @@ public class MainActivity extends AppCompatActivity {
         node.cmd("txpow txpowid:" + txid, new NodeApi.Cb() {
             @Override public void onResult(JSONObject j) {
                 JSONObject txpow = j.optJSONObject("response");
-                if (txpow == null) { notFound(Util.shorten(txid)); return; }
+                if (txpow == null) { notFound(txid); return; }
                 txpowCache.put(txid, txpow);
                 showTxnDetail(txpow);
             }
-            @Override public void onError(String m) { notFound(Util.shorten(txid)); }
+            @Override public void onError(String m) { notFound(txid); }
         });
     }
 
@@ -792,7 +795,7 @@ public class MainActivity extends AppCompatActivity {
 
             final String addr = c.optString("miniaddress", c.optString("address", ""));
             TextView ad = new TextView(this);
-            ad.setText(Util.shorten(addr) + "   (tap to copy)");
+            ad.setText(addr + "   (tap to copy)");
             ad.setTextColor(Design.DIM);
             ad.setTextSize(12f);
             ad.setTypeface(Typeface.MONOSPACE);
@@ -811,7 +814,7 @@ public class MainActivity extends AppCompatActivity {
 
         LinearLayout hero = sectionCard(body, true);
         TextView t = new TextView(this);
-        t.setText(Util.shorten(addr));
+        t.setText(addr);
         t.setTextColor(Design.TEXT);
         t.setTextSize(16f);
         t.setTypeface(Typeface.MONOSPACE);
@@ -849,7 +852,7 @@ public class MainActivity extends AppCompatActivity {
             mid.setPadding(dp(10), 0, 0, 0);
             mid.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
             TextView id = new TextView(this);
-            id.setText(Util.shorten(txpow.optString("txpowid", "")));
+            id.setText(txpow.optString("txpowid", ""));
             id.setTextColor(Design.TEXT);
             id.setTextSize(13f);
             id.setTypeface(Typeface.MONOSPACE);
@@ -953,7 +956,7 @@ public class MainActivity extends AppCompatActivity {
             row.addView(l);
         }
         TextView v = new TextView(this);
-        v.setText(Util.shorten(id) + "  ›");
+        v.setText(id + "  ›");
         v.setTextColor(Design.ACCENT);
         v.setTextSize(13f);
         v.setTypeface(Typeface.MONOSPACE);
@@ -1110,7 +1113,7 @@ public class MainActivity extends AppCompatActivity {
             int n = (txnlist != null ? txnlist.length() : 0) + (txpow.optBoolean("istransaction", false) ? 1 : 0);
 
             vh.num.setText("#" + Util.groupNum(height));
-            vh.sub.setText(Util.shorten(txpow.optString("txpowid", "")) + "  ·  " + Util.relative(ms));
+            vh.sub.setText(txpow.optString("txpowid", "") + "  ·  " + Util.relative(ms));
             if (n > 0) {
                 vh.pill.setText(n + (n == 1 ? " TXN" : " TXNS"));
                 vh.pill.setTextColor(Design.ACCENT);

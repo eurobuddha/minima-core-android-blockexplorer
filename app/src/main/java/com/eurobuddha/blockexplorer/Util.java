@@ -11,14 +11,6 @@ public final class Util {
 
     private Util() {}
 
-    /** 0xABCD1234…CDEF — keeps enough of each end to be recognisable. */
-    public static String shorten(String id) {
-        if (id == null) return "";
-        String s = id.trim();
-        if (s.length() <= 20) return s;
-        return s.substring(0, 10) + "…" + s.substring(s.length() - 8);
-    }
-
     public static boolean isMinima(String tokenid) {
         return tokenid == null || tokenid.isEmpty() || "0x00".equals(tokenid);
     }
@@ -32,7 +24,7 @@ public final class Util {
         return a.isEmpty() ? "0" : a;
     }
 
-    /** Human token label from a coin's `token` object — string name, JSON name, or short tokenid. */
+    /** Human token label from a coin's `token` object — string name, JSON name, or the full tokenid. */
     public static String tokenLabel(JSONObject coin) {
         String tid = coin.optString("tokenid", "0x00");
         if (isMinima(tid)) return "MINIMA";
@@ -47,7 +39,7 @@ public final class Util {
             String n = tok.optString("name", "");
             if (!n.isEmpty() && !n.startsWith("{")) return n;
         }
-        return shorten(tid);
+        return tid;
     }
 
     /** Coin display amount: tokens carry the human value in `tokenamount`; Minima in `amount`. */
