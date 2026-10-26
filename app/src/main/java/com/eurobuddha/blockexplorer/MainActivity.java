@@ -1,5 +1,6 @@
 package com.eurobuddha.blockexplorer;
 
+import com.eurobuddha.minimaapi.MinimaAPI;
 import android.content.BroadcastReceiver;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -54,7 +55,6 @@ import java.util.List;
  */
 public class MainActivity extends AppCompatActivity {
 
-    public static final String NODE_PKG = "com.eurobuddha.minimacore";
 
     private static final int PAGE = 16;            // blocks per page, same as the minimask explorer
     private static final int FETCH_GAP_MS = 60;    // pause between sequential block fetches
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
 
         notifyReceiver = new BroadcastReceiver() {
             @Override public void onReceive(Context c, Intent i) {
-                String data = i.getStringExtra(MinimaAPIMessages.MINIMA_API_NOTIFY_DATA);
+                String data = MinimaAPI.notifyData(i);
                 if (data == null) return;
                 try {
                     String event = new JSONObject(data).optString("event", "");
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         ContextCompat.registerReceiver(this, notifyReceiver,
-                new IntentFilter(MinimaAPIMessages.MINIMA_API_NOTIFY), ContextCompat.RECEIVER_EXPORTED);
+                MinimaAPI.notifyFilter(), ContextCompat.RECEIVER_EXPORTED);
 
         requestRefresh();
     }
@@ -231,9 +231,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openMinimaCore() {
-        Intent launch = getPackageManager().getLaunchIntentForPackage(NODE_PKG);
-        if (launch == null) launch = getPackageManager().getLaunchIntentForPackage("com.eurobuddha.minimablock");
-        if (launch == null) launch = getPackageManager().getLaunchIntentForPackage("com.eurobuddha.pandamonium");
+        Intent launch = MinimaAPI.launchNode(this);
         if (launch != null) startActivity(launch);
         else Toast.makeText(this, "Minima Core isn't installed.", Toast.LENGTH_LONG).show();
     }
